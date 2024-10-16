@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(to right, #f2711c, #f2b705, #ebf205); /* Ajuste as cores do degradê */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .gallery {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  #image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }

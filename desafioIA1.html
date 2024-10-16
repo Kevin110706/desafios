@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulário de Pesquisa</title>
+  <link rel="stylesheet" href="desafioIA1.css">
+</head>
+<body>
+  <form id="myForm">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome"><br><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone"><br><br>
+
+    <label for="escolaridade">Escolaridade:</label>
+    <input type="text" id="escolaridade" name="escolaridade"><br><br>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" id="cidade" name="cidade"><br><br>
+
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo">
+      <option value="M">Masculino</option>
+      <option value="F">Feminino</option>
+    </select><br><br>
+
+    <input type="button" value="Enviar" onclick="enviarFormulario()">
+  </form>
+
+  <div id="mensagem" style="display: none;">
+    Obrigado por responder ao formulário!
+  </div>
+
+  <script src="desafioIA1.js"></script>
+</body>
+</html>
