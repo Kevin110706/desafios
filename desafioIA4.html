@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Dívida</title>
+  <style>
+    /* Estilos CSS aqui */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .container {
+      margin: 20px auto;
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Dívida de Cartão</h1>
+    <label for="valor">Valor da Dívida:</label>
+    <input type="number" id="valor" />
+    <label for="meses">Meses de Atraso:</label>
+    <input type="number" id="meses" />
+    <label for="juros">Taxa de Juros Mensal (%):</label>
+    <input type="number" id="juros" />
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+  </div>
+
+  <script>
+    function calcular() {
+      // Obter valores dos inputs
+      const valorDivida = parseFloat(document.getElementById('valor').value);
+      const mesesAtraso = parseInt(document.getElementById('meses').value);
+      const taxaJuros = parseFloat(document.getElementById('juros').value) / 100;
+
+      // Cálculo da dívida total (juros compostos)
+      let dividaTotal = valorDivida;
+      for (let i = 0; i < mesesAtraso; i++) {
+        dividaTotal *= (1 + taxaJuros);
+      }
+
+      // Exibir resultado
+      document.getElementById('resultado').textContent = `O valor total da dívida é: R$ ${dividaTotal.toFixed(2)}`;
+    }
+  </script>
+</body>
+</html>
