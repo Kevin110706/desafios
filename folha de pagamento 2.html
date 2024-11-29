@@ -80,13 +80,15 @@
             const salario = parseFloat(document.getElementById('salario').value);
             let imposto = 0;
 
-            if (salario > 5000) {
+
+            
+            if (salario > 5000.00) {
                 imposto = 0.175;
-            } else if (salario > 4000) {
+            } else if (salario > 4000.00) {
                 imposto = 0.12;
-            } else if (salario > 3000) {
+            } else if (salario > 3000.00) {
                 imposto = 0.075;
-            } else if (salario > 1800) {
+            } else if (salario > 1800.00) {
                 imposto = 0.035;
             } else {
                 imposto = 0;
